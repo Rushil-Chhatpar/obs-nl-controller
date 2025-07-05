@@ -1,0 +1,1 @@
+/usr/bin/c++ "CMakeFiles/obs-nl-controller.dir/src/main.cpp.o" "CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o" "CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o" -o obs-nl-controller  /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0 /usr/lib/x86_64-linux-gnu/libcrypto.so 
