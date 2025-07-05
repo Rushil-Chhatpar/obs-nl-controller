@@ -69,10 +69,31 @@ include CMakeFiles/obs-nl-controller.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/obs-nl-controller.dir/flags.make
 
+obs-nl-controller_autogen/timestamp: /usr/lib/qt5/bin/moc
+obs-nl-controller_autogen/timestamp: /usr/lib/qt5/bin/uic
+obs-nl-controller_autogen/timestamp: CMakeFiles/obs-nl-controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target obs-nl-controller"
+	/usr/bin/cmake -E cmake_autogen "/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles/obs-nl-controller_autogen.dir/AutogenInfo.json" ""
+	/usr/bin/cmake -E touch "/media/rclnx/Hard Disk/repos/obs-nl-controller/build/obs-nl-controller_autogen/timestamp"
+
+CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.o: CMakeFiles/obs-nl-controller.dir/flags.make
+CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.o: obs-nl-controller_autogen/mocs_compilation.cpp
+CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.o: CMakeFiles/obs-nl-controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.o -MF CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.o -c "/media/rclnx/Hard Disk/repos/obs-nl-controller/build/obs-nl-controller_autogen/mocs_compilation.cpp"
+
+CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/rclnx/Hard Disk/repos/obs-nl-controller/build/obs-nl-controller_autogen/mocs_compilation.cpp" > CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.i
+
+CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/rclnx/Hard Disk/repos/obs-nl-controller/build/obs-nl-controller_autogen/mocs_compilation.cpp" -o CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.s
+
 CMakeFiles/obs-nl-controller.dir/src/main.cpp.o: CMakeFiles/obs-nl-controller.dir/flags.make
 CMakeFiles/obs-nl-controller.dir/src/main.cpp.o: /media/rclnx/Hard\ Disk/repos/obs-nl-controller/src/main.cpp
 CMakeFiles/obs-nl-controller.dir/src/main.cpp.o: CMakeFiles/obs-nl-controller.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/obs-nl-controller.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/obs-nl-controller.dir/src/main.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obs-nl-controller.dir/src/main.cpp.o -MF CMakeFiles/obs-nl-controller.dir/src/main.cpp.o.d -o CMakeFiles/obs-nl-controller.dir/src/main.cpp.o -c "/media/rclnx/Hard Disk/repos/obs-nl-controller/src/main.cpp"
 
 CMakeFiles/obs-nl-controller.dir/src/main.cpp.i: cmake_force
@@ -86,7 +107,7 @@ CMakeFiles/obs-nl-controller.dir/src/main.cpp.s: cmake_force
 CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o: CMakeFiles/obs-nl-controller.dir/flags.make
 CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o: /media/rclnx/Hard\ Disk/repos/obs-nl-controller/src/obs_controller.cpp
 CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o: CMakeFiles/obs-nl-controller.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o -MF CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o.d -o CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o -c "/media/rclnx/Hard Disk/repos/obs-nl-controller/src/obs_controller.cpp"
 
 CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.i: cmake_force
@@ -100,7 +121,7 @@ CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.s: cmake_force
 CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o: CMakeFiles/obs-nl-controller.dir/flags.make
 CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o: /media/rclnx/Hard\ Disk/repos/obs-nl-controller/src/nlp_parser.cpp
 CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o: CMakeFiles/obs-nl-controller.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o -MF CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o.d -o CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o -c "/media/rclnx/Hard Disk/repos/obs-nl-controller/src/nlp_parser.cpp"
 
 CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.i: cmake_force
@@ -111,23 +132,44 @@ CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/rclnx/Hard Disk/repos/obs-nl-controller/src/nlp_parser.cpp" -o CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.s
 
+CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.o: CMakeFiles/obs-nl-controller.dir/flags.make
+CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.o: /media/rclnx/Hard\ Disk/repos/obs-nl-controller/ui/mainwindow.cpp
+CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.o: CMakeFiles/obs-nl-controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.o -MF CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.o.d -o CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.o -c "/media/rclnx/Hard Disk/repos/obs-nl-controller/ui/mainwindow.cpp"
+
+CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/rclnx/Hard Disk/repos/obs-nl-controller/ui/mainwindow.cpp" > CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.i
+
+CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/rclnx/Hard Disk/repos/obs-nl-controller/ui/mainwindow.cpp" -o CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.s
+
 # Object files for target obs-nl-controller
 obs__nl__controller_OBJECTS = \
+"CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/obs-nl-controller.dir/src/main.cpp.o" \
 "CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o" \
-"CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o"
+"CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o" \
+"CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.o"
 
 # External object files for target obs-nl-controller
 obs__nl__controller_EXTERNAL_OBJECTS =
 
+obs-nl-controller: CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.o
 obs-nl-controller: CMakeFiles/obs-nl-controller.dir/src/main.cpp.o
 obs-nl-controller: CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.o
 obs-nl-controller: CMakeFiles/obs-nl-controller.dir/src/nlp_parser.cpp.o
+obs-nl-controller: CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.o
 obs-nl-controller: CMakeFiles/obs-nl-controller.dir/build.make
+obs-nl-controller: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
 obs-nl-controller: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
 obs-nl-controller: /usr/lib/x86_64-linux-gnu/libcrypto.so
+obs-nl-controller: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
+obs-nl-controller: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
 obs-nl-controller: CMakeFiles/obs-nl-controller.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable obs-nl-controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable obs-nl-controller"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/obs-nl-controller.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -138,7 +180,7 @@ CMakeFiles/obs-nl-controller.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/obs-nl-controller.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/obs-nl-controller.dir/clean
 
-CMakeFiles/obs-nl-controller.dir/depend:
+CMakeFiles/obs-nl-controller.dir/depend: obs-nl-controller_autogen/timestamp
 	cd "/media/rclnx/Hard Disk/repos/obs-nl-controller/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/rclnx/Hard Disk/repos/obs-nl-controller" "/media/rclnx/Hard Disk/repos/obs-nl-controller" "/media/rclnx/Hard Disk/repos/obs-nl-controller/build" "/media/rclnx/Hard Disk/repos/obs-nl-controller/build" "/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles/obs-nl-controller.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/obs-nl-controller.dir/depend
 

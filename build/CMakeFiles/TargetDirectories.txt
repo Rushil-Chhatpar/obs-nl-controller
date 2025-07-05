@@ -1,3 +1,5 @@
 /media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles/obs-nl-controller.dir
 /media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles/edit_cache.dir
 /media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles/rebuild_cache.dir
+/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles/obs-nl-controller_autogen_timestamp_deps.dir
+/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles/obs-nl-controller_autogen.dir

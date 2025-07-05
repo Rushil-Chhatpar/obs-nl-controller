@@ -129,6 +129,56 @@ obs-nl-controller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obs-nl-controller.dir/build.make CMakeFiles/obs-nl-controller.dir/build
 .PHONY : obs-nl-controller/fast
 
+#=============================================================================
+# Target rules for targets named obs-nl-controller_autogen_timestamp_deps
+
+# Build rule for target.
+obs-nl-controller_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 obs-nl-controller_autogen_timestamp_deps
+.PHONY : obs-nl-controller_autogen_timestamp_deps
+
+# fast build rule for target.
+obs-nl-controller_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obs-nl-controller_autogen_timestamp_deps.dir/build.make CMakeFiles/obs-nl-controller_autogen_timestamp_deps.dir/build
+.PHONY : obs-nl-controller_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named obs-nl-controller_autogen
+
+# Build rule for target.
+obs-nl-controller_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 obs-nl-controller_autogen
+.PHONY : obs-nl-controller_autogen
+
+# fast build rule for target.
+obs-nl-controller_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obs-nl-controller_autogen.dir/build.make CMakeFiles/obs-nl-controller_autogen.dir/build
+.PHONY : obs-nl-controller_autogen/fast
+
+obs-nl-controller_autogen/mocs_compilation.o: obs-nl-controller_autogen/mocs_compilation.cpp.o
+.PHONY : obs-nl-controller_autogen/mocs_compilation.o
+
+# target to build an object file
+obs-nl-controller_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obs-nl-controller.dir/build.make CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.o
+.PHONY : obs-nl-controller_autogen/mocs_compilation.cpp.o
+
+obs-nl-controller_autogen/mocs_compilation.i: obs-nl-controller_autogen/mocs_compilation.cpp.i
+.PHONY : obs-nl-controller_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+obs-nl-controller_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obs-nl-controller.dir/build.make CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.i
+.PHONY : obs-nl-controller_autogen/mocs_compilation.cpp.i
+
+obs-nl-controller_autogen/mocs_compilation.s: obs-nl-controller_autogen/mocs_compilation.cpp.s
+.PHONY : obs-nl-controller_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+obs-nl-controller_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obs-nl-controller.dir/build.make CMakeFiles/obs-nl-controller.dir/obs-nl-controller_autogen/mocs_compilation.cpp.s
+.PHONY : obs-nl-controller_autogen/mocs_compilation.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -201,6 +251,30 @@ src/obs_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obs-nl-controller.dir/build.make CMakeFiles/obs-nl-controller.dir/src/obs_controller.cpp.s
 .PHONY : src/obs_controller.cpp.s
 
+ui/mainwindow.o: ui/mainwindow.cpp.o
+.PHONY : ui/mainwindow.o
+
+# target to build an object file
+ui/mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obs-nl-controller.dir/build.make CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.o
+.PHONY : ui/mainwindow.cpp.o
+
+ui/mainwindow.i: ui/mainwindow.cpp.i
+.PHONY : ui/mainwindow.i
+
+# target to preprocess a source file
+ui/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obs-nl-controller.dir/build.make CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.i
+.PHONY : ui/mainwindow.cpp.i
+
+ui/mainwindow.s: ui/mainwindow.cpp.s
+.PHONY : ui/mainwindow.s
+
+# target to generate assembly for a file
+ui/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obs-nl-controller.dir/build.make CMakeFiles/obs-nl-controller.dir/ui/mainwindow.cpp.s
+.PHONY : ui/mainwindow.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -209,7 +283,12 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... obs-nl-controller_autogen"
+	@echo "... obs-nl-controller_autogen_timestamp_deps"
 	@echo "... obs-nl-controller"
+	@echo "... obs-nl-controller_autogen/mocs_compilation.o"
+	@echo "... obs-nl-controller_autogen/mocs_compilation.i"
+	@echo "... obs-nl-controller_autogen/mocs_compilation.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -219,6 +298,9 @@ help:
 	@echo "... src/obs_controller.o"
 	@echo "... src/obs_controller.i"
 	@echo "... src/obs_controller.s"
+	@echo "... ui/mainwindow.o"
+	@echo "... ui/mainwindow.i"
+	@echo "... ui/mainwindow.s"
 .PHONY : help
 
 

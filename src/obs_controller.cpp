@@ -9,13 +9,14 @@
 using websocketpp::lib::placeholders::_1;
 using websocketpp::lib::placeholders::_2;
 
-OBSController::OBSController(const std::string& host, const std::string& password)
-    : host_(host), password_(password) {
+OBSController::OBSController(const std::string& host, const std::string& password, QObject* parent)
+    : QObject(parent), host_(host), password_(password) {
     ws_client_.clear_access_channels(websocketpp::log::alevel::all);
     ws_client_.set_access_channels(websocketpp::log::alevel::connect | websocketpp::log::alevel::disconnect);
     ws_client_.init_asio();
     ws_client_.set_open_handler([this](websocketpp::connection_hdl hdl) {
         connection_ = ws_client_.get_con_from_hdl(hdl);
+        emit statusUpdated("Connected to OBS WebSocket");
     });
     ws_client_.set_message_handler([this](websocketpp::connection_hdl, client<asio_client>::message_ptr msg) {
         onMessage(msg->get_payload());
@@ -30,7 +31,7 @@ bool OBSController::connect() {
     websocketpp::lib::error_code ec;
     connection_ = ws_client_.get_connection(host_, ec);
     if (ec) {
-        std::cerr << "Connection failed: " << ec.message() << std::endl;
+        emit statusUpdated("Connection failed: " + ec.message());
         return false;
     }
     ws_client_.connect(connection_);
@@ -46,12 +47,10 @@ void OBSController::disconnect() {
 }
 
 std::string OBSController::computeAuthResponse(const std::string& password, const std::string& salt, const std::string& challenge) {
-    // Step 1: Concatenate password and salt, then SHA256
     std::string pass_salt = password + salt;
     unsigned char hash[SHA256_DIGEST_LENGTH];
     SHA256(reinterpret_cast<const unsigned char*>(pass_salt.c_str()), pass_salt.length(), hash);
 
-    // Step 2: Convert SHA256 hash to base64
     BIO* bio = BIO_new(BIO_s_mem());
     BIO* b64 = BIO_new(BIO_f_base64());
     BIO_set_flags(b64, BIO_FLAGS_BASE64_NO_NL);
@@ -64,11 +63,9 @@ std::string OBSController::computeAuthResponse(const std::string& password, cons
     std::string base64_pass_salt(base64_data, base64_len);
     BIO_free_all(bio);
 
-    // Step 3: Concatenate base64 hash with challenge, then SHA256 again
     std::string auth_challenge = base64_pass_salt + challenge;
     SHA256(reinterpret_cast<const unsigned char*>(auth_challenge.c_str()), auth_challenge.length(), hash);
 
-    // Step 4: Convert final hash to base64
     bio = BIO_new(BIO_s_mem());
     b64 = BIO_new(BIO_f_base64());
     BIO_set_flags(b64, BIO_FLAGS_BASE64_NO_NL);
@@ -85,7 +82,7 @@ std::string OBSController::computeAuthResponse(const std::string& password, cons
 
 bool OBSController::sendCommand(const std::string& requestType, const json& requestData) {
     if (!authenticated_ || !connection_) {
-        std::cerr << "Not connected or authenticated" << std::endl;
+        emit statusUpdated("Not connected or authenticated");
         return false;
     }
     json request = {
@@ -98,9 +95,9 @@ bool OBSController::sendCommand(const std::string& requestType, const json& requ
     };
     try {
         connection_->send(request.dump());
-        std::cout << "Sent command: " << requestType << std::endl;
+        emit statusUpdated("Sent command: " + requestType);
     } catch (const std::exception& e) {
-        std::cerr << "Error sending command: " << e.what() << std::endl;
+        emit statusUpdated("Error sending command: " + std::string(e.what()));
         return false;
     }
     return true;
@@ -109,10 +106,10 @@ bool OBSController::sendCommand(const std::string& requestType, const json& requ
 void OBSController::onMessage(const std::string& message) {
     json response = json::parse(message, nullptr, false);
     if (response.is_discarded()) {
-        std::cerr << "Invalid JSON received" << std::endl;
+        emit statusUpdated("Invalid JSON received");
         return;
     }
-    std::cout << "Received: " << message << std::endl;
+    emit statusUpdated("Received: " + message);
 
     if (response.contains("op") && response["op"] == 0) { // Hello message
         if (!password_.empty() && response["d"].contains("authentication")) {
@@ -129,7 +126,7 @@ void OBSController::onMessage(const std::string& message) {
             try {
                 connection_->send(identify.dump());
             } catch (const std::exception& e) {
-                std::cerr << "Error sending Identify: " << e.what() << std::endl;
+                emit statusUpdated("Error sending Identify: " + std::string(e.what()));
             }
         } else {
             json identify = {
@@ -139,13 +136,25 @@ void OBSController::onMessage(const std::string& message) {
             try {
                 connection_->send(identify.dump());
             } catch (const std::exception& e) {
-                std::cerr << "Error sending Identify: " << e.what() << std::endl;
+                emit statusUpdated("Error sending Identify: " + std::string(e.what()));
             }
         }
     } else if (response.contains("op") && response["op"] == 2) { // Identified message
         authenticated_ = response["d"]["negotiatedRpcVersion"] == 1;
-        std::cout << "Authentication " << (authenticated_ ? "successful" : "failed") << std::endl;
+        emit statusUpdated("Authentication " + std::string(authenticated_ ? "successful" : "failed"));
     } else if (response.contains("op") && response["op"] == 7) { // RequestResponse
-        std::cout << "Command response: " << response["d"]["responseData"].dump() << std::endl;
+        if (response["d"]["requestType"] == "GetSceneList") {
+            std::vector<std::string> scenes;
+            for (const auto& scene : response["d"]["responseData"]["scenes"]) {
+                scenes.push_back(scene["sceneName"].get<std::string>());
+            }
+            emit sceneListReceived(scenes);
+        } else {
+            std::string status = "Command response: " + response["d"]["responseData"].dump();
+            if (!response["d"]["requestStatus"]["result"]) {
+                status += " (Error: " + response["d"]["requestStatus"]["comment"].get<std::string>() + ")";
+            }
+            emit statusUpdated(status);
+        }
     }
 }
