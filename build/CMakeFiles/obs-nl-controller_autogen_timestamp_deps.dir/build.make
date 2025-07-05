@@ -66,12 +66,12 @@ include CMakeFiles/obs-nl-controller_autogen_timestamp_deps.dir/compiler_depend.
 # Include the progress variables for this target.
 include CMakeFiles/obs-nl-controller_autogen_timestamp_deps.dir/progress.make
 
+CMakeFiles/obs-nl-controller_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 CMakeFiles/obs-nl-controller_autogen_timestamp_deps: /usr/lib/qt5/bin/moc
 CMakeFiles/obs-nl-controller_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.15.13
-CMakeFiles/obs-nl-controller_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.15.13
 CMakeFiles/obs-nl-controller_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.15.13
-CMakeFiles/obs-nl-controller_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libcrypto.so
 CMakeFiles/obs-nl-controller_autogen_timestamp_deps: /usr/lib/qt5/bin/uic
+CMakeFiles/obs-nl-controller_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libcrypto.so
 CMakeFiles/obs-nl-controller_autogen_timestamp_deps: /usr/lib/x86_64-linux-gnu/libboost_system.so.1.83.0
 
 obs-nl-controller_autogen_timestamp_deps: CMakeFiles/obs-nl-controller_autogen_timestamp_deps

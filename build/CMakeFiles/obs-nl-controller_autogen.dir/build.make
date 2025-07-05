@@ -72,7 +72,7 @@ obs-nl-controller_autogen/timestamp: /usr/lib/qt5/bin/moc
 obs-nl-controller_autogen/timestamp: /usr/lib/qt5/bin/uic
 obs-nl-controller_autogen/timestamp: CMakeFiles/obs-nl-controller_autogen.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target obs-nl-controller"
-	/usr/bin/cmake -E cmake_autogen "/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles/obs-nl-controller_autogen.dir/AutogenInfo.json" ""
+	/usr/bin/cmake -E cmake_autogen "/media/rclnx/Hard Disk/repos/obs-nl-controller/build/CMakeFiles/obs-nl-controller_autogen.dir/AutogenInfo.json" Release
 	/usr/bin/cmake -E touch "/media/rclnx/Hard Disk/repos/obs-nl-controller/build/obs-nl-controller_autogen/timestamp"
 
 obs-nl-controller_autogen: CMakeFiles/obs-nl-controller_autogen

@@ -6,5 +6,5 @@ CXX_DEFINES = -DBOOST_SYSTEM_DYN_LINK -DBOOST_SYSTEM_NO_LIB -DQT_CORE_LIB -DQT_G
 
 CXX_INCLUDES = -I"/media/rclnx/Hard Disk/repos/obs-nl-controller/build/obs-nl-controller_autogen/include" -I"/media/rclnx/Hard Disk/repos/obs-nl-controller/include" -I"/media/rclnx/Hard Disk/repos/obs-nl-controller/ui" -isystem /usr/include/x86_64-linux-gnu/qt5 -isystem /usr/include/x86_64-linux-gnu/qt5/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt5/QtGui -isystem /usr/include/x86_64-linux-gnu/qt5/QtWidgets
 
-CXX_FLAGS = -std=gnu++17 -fPIC
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -fPIC
 
